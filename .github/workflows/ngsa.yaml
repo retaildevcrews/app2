@@ -36,6 +36,8 @@ jobs:
 
     - name: Docker Build
       run: |
+        git config --global user.email "bartr@microsoft.com"
+        git config --global user.name bartr
         git clone https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/retaildevcrews/bartr-test who-dat
         cd who-dat
         date >> who.dat
