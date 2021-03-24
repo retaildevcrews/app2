@@ -1,0 +1,9 @@
+profiles:
+  - aspnetcore
+owner:
+  group: ngsa
+
+deploy:
+  - azure
+  - gcp
+  - do
