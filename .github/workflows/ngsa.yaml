@@ -36,7 +36,7 @@ jobs:
 
     - name: Docker Build
       run: |
-        git clone https://git:${{ secrets.GHCR_PAT }}@github.com/retaildevcrews/bartr-test who-dat
+        git clone https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/retaildevcrews/bartr-test who-dat
         cd who-dat
         date >> who.dat
         git commit -am "ci-cd"
