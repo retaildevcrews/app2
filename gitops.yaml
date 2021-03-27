@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ngsa-memory
-  namespace: ngsa
+  name: {{gitops.Name}}
+  namespace: {{gitops.Namespace}}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ngsa-memory
+      app: {{gitops.Name}}
   template:
     metadata:
       labels:
-        app: ngsa-memory
+        app: {{gitops.Name}}
     spec:
       containers:
         - name: app
-          image: ghcr.io/retaildevcrews/ngsa-app:beta-0.3.0-0321-0605-24
+          image: {{gitops.Imagename}}:{{gitops.Imagetag}}
           imagePullPolicy: Always
 
           args: 
@@ -35,8 +35,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: ngsa-memory
-  namespace: ngsa
+  name: {{gitops.Name}}
+  namespace: {{gitops.Namespace}}
 spec:
   type: ClusterIP
   ports:
@@ -45,4 +45,4 @@ spec:
       protocol: TCP
       name: http
   selector:
-    app: ngsa-memory
+    app: {{gitops.Name}}

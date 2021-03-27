@@ -1,5 +1,8 @@
 name: ngsa-memory
-owner: ngsa
+namespace: ngsa
+imagename: ghcr.io/retaildevcrews/ngsa-app
+imagetag: beta-0.3.0-0321-0605-24
+
 targets:
   - azure
 #  - do
