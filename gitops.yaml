@@ -12,7 +12,7 @@ spec:
     metadata:
       labels:
         app: {{gitops.Name}}
-        semver: {{gitops.Semver}}
+        version: beta-{{gitops.Version}}
     spec:
       containers:
         - name: app
