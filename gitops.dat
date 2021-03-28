@@ -1,7 +1,7 @@
 name: ngsa-memory
 namespace: ngsa
 imagename: ghcr.io/retaildevcrews/ngsa-app
-imagetag: beta-0.3.0-0321-0605-24
+imagetag: beta
 
 targets:
   - azure
