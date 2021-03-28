@@ -34,8 +34,10 @@ jobs:
         git clone https://${{ secrets.GHCR_ID }}:${{ secrets.GHCR_PAT }}@github.com/retaildevcrews/gitops
         cd gitops
         dotnet run -p src
-        git pull
-        date >> runlog
-        git add .
-        git commit -am "gitops ngsa-memory deployment"
-        git push
+        
+        if [[ $(git status -s) ]]; then
+          git pull
+          git add .
+          git commit -am "gitops ngsa-memory deployment"
+          git push
+        fi
