@@ -2,7 +2,7 @@
     "name": "ngsa-memory",
     "imageName": "ghcr.io/retaildevcrews/ngsa-app",
     "imageTag": "beta",
-    "targets": [ "azure", "do", "gcp"]
+    "targets": [ "azure", "do", "gcp" ]
 
     // valid targets ["azure", "do", "gcp"]
 }
