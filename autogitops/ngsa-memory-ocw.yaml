@@ -39,6 +39,16 @@ spec:
             - name: http
               containerPort: 8080
               protocol: TCP
+
+          resources:
+            - limits:
+              - cpu: 1
+                memory: 1Gi
+
+              requests:
+              - cpu: 500m
+                memory: 512Mi
+
       # Added Node Selector
       # Since we have two node pools for PnP cluster
       nodeSelector:
