@@ -66,6 +66,7 @@ spec:
       name: http
   selector:
     app: {{gitops.name}}
+
 ---
 
 apiVersion: networking.k8s.io/v1
